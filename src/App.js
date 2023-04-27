@@ -1,20 +1,23 @@
 import "./App.css";
-import { client } from "./Client";
-import { useState, useEffect } from "react";
-function App() {
-  const [recipes, setRecipes] = useState();
+import { useContext } from "react";
+import Searchbar from "./components/Searchbar";
+import { ContentfulContext } from "./context/ContentfulContext";
 
-  useEffect(() => {
-    client
-      .getEntries()
-      .then((data) => setRecipes(data))
-      .catch((err) => console.log(err));
-  }, []);
-  console.log(recipes);
+function App() {
+  const { recipes } = useContext(ContentfulContext);
+
   return (
     <div className="App">
-      <h1> {recipes?.items[0].fields.description}</h1>
-      <img src={recipes?.items[0].fields.wafflePicture[0].fields.file.url} />
+      <Searchbar />
+      {recipes?.total > 0 && (
+        <>
+          <h1> {recipes?.items[0].fields.description}</h1>
+          <img
+            src={recipes?.items[0].fields.wafflePicture[0].fields.file.url}
+            alt={recipes?.items[0].fields.wafflePicture[0].fields.title}
+          />
+        </>
+      )}
     </div>
   );
 }
