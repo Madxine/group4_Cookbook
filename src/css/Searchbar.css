@@ -1,5 +1,6 @@
 .Searchbar {
-  margin: 1rem 30rem;
+  margin: 1rem auto;
+  max-width: 80rem;
   padding: 2rem 6rem;
   background-image: linear-gradient(
     70deg,
@@ -41,4 +42,40 @@
   border-left: 1px solid hsl(0deg 100% 72%);
   font-family: inherit;
   font-weight: 700;
+}
+
+@media (width < 520px) {
+  .Searchbar {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (width < 400px) {
+  .Searchbar {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-image: none;
+  }
+  .Searchbar__input {
+    border: 2px solid hsl(37deg 100% 67%);
+    border-right: none;
+  }
+  .Searchbar__btn {
+    border: 2px solid hsl(37deg 100% 67%);
+    border-left: none;
+  }
+}
+
+@media (width <= 360px) {
+  .Searchbar__input {
+    padding: 1rem 2.5rem;
+    border: 2px solid hsl(37deg 100% 67%);
+    border-right: none;
+  }
+  .Searchbar__btn {
+    border: 2px solid hsl(37deg 100% 67%);
+    padding: 1rem 1.5rem 1rem 1rem;
+    border-left: none;
+  }
 }
