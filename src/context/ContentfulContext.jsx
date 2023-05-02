@@ -5,8 +5,8 @@ import { client } from "../Client";
 export const ContentfulContext = createContext();
 
 export default function ContentfulContextProvider(props) {
-  const [recipes, setRecipes] = useState();
-  const [queryWord, setQueryWord] = useState("sugar");
+  const [recipes, setRecipes] = useState({});
+  const [queryWord, setQueryWord] = useState("");
 
   useEffect(() => {
     client

@@ -1,0 +1,5 @@
+.sidebar { display:flex;
+  width: 30px;
+  border: 5px;
+  border-color: orange;
+}
