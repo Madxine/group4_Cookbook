@@ -8,8 +8,8 @@ export default function Searchbar() {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
-  const handleInput = ({ target }) => {
-    setInput(target.value);
+  const handleInput = (event) => {
+    setInput(event.target.value);
   };
 
   const handleSubmit = (e) => {
