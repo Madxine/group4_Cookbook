@@ -5,6 +5,9 @@
   border-style: solid;
   border-radius: 20px;
   border-color: orange;
-
+  overflow: scroll;
   margin-left: 20px;
+  height: 80vh;
+  scroll-snap-type: proximity;
+  scrollbar-shadow-color: blueviolet;
 }

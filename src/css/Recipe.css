@@ -1,0 +1,31 @@
+.recipe_container {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  /* height: 70%; */
+  aspect-ratio: 1;
+}
+
+.recipe__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.recipe__pic {
+  height: 100%;
+  position: relative;
+}
+
+.recipe__image {
+  height: 100%;
+  display: block;
+}
+
+.recipe__title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-20deg);
+  font-size: 4rem;
+  /* text-wrap: balance; */
+}
