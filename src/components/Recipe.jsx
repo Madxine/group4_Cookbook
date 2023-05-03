@@ -15,15 +15,17 @@ export default function Recipe() {
   return (
     Object.keys(recipe).length > 0 && (
       <div className="recipe_container">
-        <figure className="recipe__pic">
-          <img
-            className="recipe__image"
-            src={recipe.fields.wafflePicture[0].fields.file.url}
-            alt={recipe?.fields.waffles}
-          />
-          <h1 className="recipe__title">{recipe?.fields.waffles}</h1>
-        </figure>
-        <div className="leftside">
+        <div className="recipe__image--wrapper">
+          <figure className="recipe__pic">
+            <img
+              className="recipe__image"
+              src={recipe.fields.wafflePicture[0].fields.file.url}
+              alt={recipe?.fields.waffles}
+            />
+            <h1 className="recipe__title">{recipe?.fields.waffles}</h1>
+          </figure>
+        </div>
+        <div className="recipe__rightside">
           <nav className="recipe__nav">
             <NavLink to={`/${index}/ingredients`} className="recipe__tab">
               Ingredients

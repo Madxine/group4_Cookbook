@@ -2,30 +2,48 @@
   display: flex;
   flex-direction: row;
   width: 70%;
-  /* height: 70%; */
+  height: 77.5vh;
   aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .recipe__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0.5rem 2rem;
 }
+.recipe__image--wrapper {
+  height: 100%;
+  width: 40rem;
+}
+
 .recipe__pic {
   height: 100%;
+  width: 100%;
   position: relative;
+  overflow: hidden;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .recipe__image {
   height: 100%;
   display: block;
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
 .recipe__title {
   position: absolute;
   top: 15%;
   left: 50%;
-  transform: translateX(-50%) rotate(-20deg);
+  transform: translateX(-50%) rotate(-15deg);
   font-size: 4rem;
-  /* text-wrap: balance; */
+  text-wrap: balance;
+  color: rgb(246, 246, 246);
+  text-align: center;
+  text-shadow: 1px 1px #222;
 }
