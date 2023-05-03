@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import "../css/Searchbar.css";
 import { ContentfulContext } from "../context/ContentfulContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Searchbar() {
   const { setQueryWord } = useContext(ContentfulContext);
   const [input, setInput] = useState("");
+  const navigate = useNavigate();
 
   const handleInput = ({ target }) => {
     setInput(target.value);
@@ -15,6 +17,7 @@ export default function Searchbar() {
     setQueryWord(input);
     setInput("");
     e.target.children[0].focus();
+    navigate("/");
   };
 
   return (
