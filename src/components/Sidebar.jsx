@@ -9,9 +9,14 @@ export default function Sidebar() {
     <ul className="sidebar">
       {recipes.items.length > 0 &&
         recipes.items.map((recipe, ind) => (
-          <NavLink key={recipe.sys.id} to={`/${ind}/ingredients`}>
+          <NavLink
+            className="sidebar__item"
+            key={recipe.sys.id}
+            to={`/${ind}/ingredients`}
+          >
             <h2>{recipe.fields.waffles}</h2>
             <img
+              className="sidebar__item-img"
               src={recipe.fields.wafflePicture[1]?.fields?.file.url}
               alt="something"
             />
