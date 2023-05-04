@@ -1,17 +1,21 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ContentfulContext } from "../context/ContentfulContext";
+import { NutritionContext } from "../context/NutritionContext";
 import { NavLink } from "react-router-dom";
 import "../css/Recipe.css";
+import Nutrition from "./Nutrition";
 
 export default function Recipe() {
   const { recipes } = useContext(ContentfulContext);
+  const { setShallFetch } = useContext(NutritionContext);
   const { index, tab } = useParams();
 
   // const ingredients = recipes.fields.ingridients;
+  console.log(tab);
 
   const recipe = recipes.items[index];
-  console.log(recipe);
+  // console.log(recipe);
   return (
     Object.keys(recipe).length > 0 && (
       <div className="recipe_container">
@@ -33,12 +37,22 @@ export default function Recipe() {
             <NavLink to={`/${index}/preparation`} className="recipe__tab">
               Preparation
             </NavLink>
-            <NavLink to={`/${index}/nutrients`} className="recipe__tab">
+            <NavLink
+              to={`/${index}/nutrients`}
+              className="recipe__tab"
+              onClick={() => setShallFetch(true)}
+            >
               Nutrients
             </NavLink>
           </nav>
           <div className="recipe-description">
-            <p>{recipe.fields.ingridients}</p>
+            {tab === "ingredients" ? (
+              <p>{recipe.fields.ingridients}</p>
+            ) : tab === "preparation" ? (
+              <p>{recipe.fields.description}</p>
+            ) : (
+              <Nutrition />
+            )}
           </div>
         </div>
       </div>
