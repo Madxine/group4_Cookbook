@@ -1,29 +1,31 @@
 .Searchbar {
+  display: grid;
+  place-content: center;
   margin: 1rem auto;
-  max-width: 80rem;
+  width: 80rem;
   padding: 2rem 6rem;
   background-image: linear-gradient(
     70deg,
-    hsl(0deg 100% 72%) 0%,
-    hsl(6deg 100% 71%) 8%,
-    hsl(11deg 100% 70%) 18%,
+    hsl(0, 62%, 52%) 0%,
+    hsl(6, 80%, 47%) 8%,
+    hsl(11, 93%, 42%) 18%,
     hsl(16deg 100% 69%) 32%,
     hsl(21deg 100% 68%) 48%,
     hsl(25deg 100% 67%) 65%,
-    hsl(29deg 100% 67%) 79%,
-    hsl(33deg 100% 67%) 89%,
-    hsl(37deg 100% 67%) 96%,
-    hsl(40deg 100% 67%) 100%
+    hsl(14, 71%, 49%) 79%,
+    hsl(13, 82%, 46%) 89%,
+    hsl(4, 78%, 47%) 96%,
+    hsl(1, 76%, 45%) 100%
   );
   border-radius: 7rem;
-  border: 2px solid hsl(0deg 100% 72%);
+  border: 1px solid hsl(0, 73%, 45%);
 }
 
 .Searchbar__input {
   border: none;
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
-  padding: 2rem 5rem;
+  padding: 2rem 20rem;
   font-family: inherit;
   font-weight: 700;
 }
@@ -36,7 +38,7 @@
   border: none;
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
-  background-color: hsl(0deg 100% 72%);
+  background-color: rgb(230, 32, 21);
   cursor: pointer;
   color: white;
   border-left: 1px solid hsl(0deg 100% 72%);
