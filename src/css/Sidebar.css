@@ -3,11 +3,50 @@
   flex-direction: column;
   width: 200px;
   border-style: solid;
-  border-radius: 20px;
+  border-radius: 10px;
   border-color: orange;
-  overflow: scroll;
+  overflow-y: auto;
   margin-left: 20px;
   height: 80vh;
-  scroll-snap-type: proximity;
-  scrollbar-shadow-color: blueviolet;
+  scroll-snap-type: mandatory;
+  scrollbar-width: thin;
+  /* scrollbar-3dlight-color: red; */
+  scrollbar-color: rgba(199, 129, 0, 0.616) rgba(255, 140, 0, 0.096);
+  scrollbar-gutter: stable;
+  direction: ltr;
+}
+
+.sidebar::-webkit-scrollbar {
+  border-radius: 20px;
+  width: 1rem;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: rgba(255, 140, 0, 0.096);
+  width: 1rem;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  box-shadow: inset 3px 3px 2px rgb(221, 156, 35),
+    inset -3px -3px 2px rgba(199, 129, 0, 1);
+  border-radius: 20px;
+  cursor: grab;
+}
+
+.sidebar__item {
+  direction: ltr;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  max-height: 10rem;
+  margin-top: 0.1rem;
+  padding: 0.75rem 0.1rem 0.75rem 0.5rem;
+  gap: 3px;
+  background-color: rgba(255, 140, 0, 0.096);
+}
+
+.sidebar__item-img {
+  flex: 0 0 40%;
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
