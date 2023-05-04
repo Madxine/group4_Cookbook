@@ -2,7 +2,6 @@ import { ContentfulContext } from "../context/ContentfulContext";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "../css/Sidebar.css";
-
 export default function Sidebar() {
   const { recipes } = useContext(ContentfulContext);
 
