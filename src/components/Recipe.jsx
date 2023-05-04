@@ -22,19 +22,22 @@ export default function Recipe() {
               src={recipe.fields.wafflePicture[0].fields.file.url}
               alt={recipe?.fields.waffles}
             />
-            <h1 className="recipe__title">{recipe?.fields.waffles}</h1>
           </figure>
         </div>
         <div className="recipe__rightside">
-          <nav className="recipe__nav">
+          <div className="recipe__title">
+            <h1>{recipe?.fields.waffles}</h1>
+          </div>
+          <nav className="bloc-tabs">
             <NavLink to={`/${index}/ingredients`} className="recipe__tab">
-              Ingredients
+              <h3>Ingredients</h3>
             </NavLink>
+
             <NavLink to={`/${index}/preparation`} className="recipe__tab">
-              Preparation
+              <h3>Preparation</h3>
             </NavLink>
             <NavLink to={`/${index}/nutrients`} className="recipe__tab">
-              Nutrients
+              <h3>Nutrients</h3>
             </NavLink>
           </nav>
           <div className="recipe-description">
