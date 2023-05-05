@@ -10,12 +10,12 @@ export default function Nutrition() {
     setTimeout(() => {
       const estimatedCostEURTemp = (
         ingInfos.reduce((acc, val) => {
-          if (val.estimatedCost.value === undefined) return acc;
+          if (val.estimatedCost === undefined) return acc;
           return acc + val.estimatedCost.value;
         }, 0) * 0.0091
       ).toFixed(2); // 100 us cent -> 91 eur cent -> /100
       const totalCaloriesTemp = ingInfos.reduce((acc, val) => {
-        if (!val.nutrition.nutrients === undefined) return acc;
+        if (val.nutrition === undefined) return acc;
         return (
           acc +
           val.nutrition.nutrients.find((el) => el.name === "Calories").amount
