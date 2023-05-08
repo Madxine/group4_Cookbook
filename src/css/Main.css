@@ -1,0 +1,22 @@
+.head>img{
+height:20vh;
+opacity: 0;
+margin-bottom: 40px;
+}
+
+.content{
+display: flex;
+flex-direction: column;
+justify-content:center;
+justify-content: space-around;
+}
+
+.sidebarcontent{
+display: flex;
+flex-direction: column-reverse;
+margin-top: 40px;    
+}
+
+.col-rev {
+  flex-direction: column-reverse;
+}

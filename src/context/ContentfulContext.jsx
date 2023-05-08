@@ -7,6 +7,8 @@ export const ContentfulContext = createContext();
 export default function ContentfulContextProvider(props) {
   const [recipes, setRecipes] = useState({});
   const [queryWord, setQueryWord] = useState("");
+  const [animateSlide, setAnimateSlide] = useState(true);
+  const [isRecipeDisplayed, setIsRecipeDisplayed] = useState(false);
 
   useEffect(() => {
     client
@@ -17,8 +19,16 @@ export default function ContentfulContextProvider(props) {
       .catch((err) => console.log(err));
   }, [queryWord]);
 
+  useEffect(() => {
+    if (animateSlide) {
+      setTimeout(() => {
+        setAnimateSlide(false)
+      }, 4000)
+    }
+  }, [animateSlide])
+
   return (
-    <ContentfulContext.Provider value={{ recipes, setQueryWord }}>
+    <ContentfulContext.Provider value={{ recipes, setQueryWord, animateSlide, setAnimateSlide, isRecipeDisplayed, setIsRecipeDisplayed }}>
       {props.children}
     </ContentfulContext.Provider>
   );

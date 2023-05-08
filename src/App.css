@@ -1,4 +1,7 @@
 .App {
+  display: flex;
+  flex-direction: column;
+ overflow: hidden;
 }
 html {
   margin: 0;
@@ -6,11 +9,6 @@ html {
   background-color: rgb(246, 246, 246);
 }
 
-main {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
 
 .video__container {
   position: absolute;
@@ -22,6 +20,7 @@ main {
 }
 
 .video {
+  
   height: 100%;
   width: 100%;
 }
