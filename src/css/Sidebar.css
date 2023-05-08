@@ -1,18 +1,20 @@
-.sidebar {
+.sidebar{
   display: flex;
-  flex-direction: column;
-  width: 200px;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: orange;
-  overflow-y: auto;
+  flex-direction: row;
+  justify-content: center;
+  width: 200vh;
+  /* border-style: solid;
+  border-radius: 10px; */
+  /* border-color: rgba(240, 0, 0, 0.422); */
+  /* overflow-y: auto; */
   margin-left: 20px;
-  height: 80vh;
-  scroll-snap-type: mandatory;
+  height: 150px;
+  /* scroll-snap-type: mandatory;
   scrollbar-width: thin;
+  overflow-y: hidden; */
   /* scrollbar-3dlight-color: red; */
-  scrollbar-color: rgba(199, 129, 0, 0.616) rgba(255, 140, 0, 0.096);
-  scrollbar-gutter: stable;
+  /* scrollbar-color: rgba(199, 0, 0, 0.616) rgb(255, 0, 0); */
+  /* scrollbar-gutter: stable; */
   direction: ltr;
 }
 
@@ -25,28 +27,89 @@
   width: 1rem;
 }
 .sidebar::-webkit-scrollbar-thumb {
-  box-shadow: inset 3px 3px 2px rgb(221, 156, 35),
-    inset -3px -3px 2px rgba(199, 129, 0, 1);
+  box-shadow: inset 3px 3px 2px rgba(254, 101, 101, 0.844),
+    inset -3px -3px 2px rgb(255, 47, 47);
   border-radius: 20px;
   cursor: grab;
 }
 
+.sidebarItems{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .sidebar__item {
-  direction: ltr;
-  color: inherit;
+  /* direction: ltr;
+  color: white;
   text-decoration: none;
   display: flex;
   max-height: 10rem;
   margin-top: 0.1rem;
   padding: 0.75rem 0.1rem 0.75rem 0.5rem;
   gap: 3px;
-  background-color: rgba(255, 140, 0, 0.096);
+  background-color: rgba(255, 140, 0, 0.096); */
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.sidebar__title {
+  display: none;
+  word-break: normal;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in;
+}
+
+.sidebar__item:hover .sidebar__title {
+  display: block;
+  opacity: 1;
+} 
+
+.slide{
+  animation-name: ani-images; /*動畫名稱(自訂)*/
+  animation-duration: 4s; /*一次完整動畫時間為4秒*/
+  animation-iteration-count:inherit; /*播放次數為無限次*/
+  animation-direction:alternate; /*播放方向為先正向再反向*/
+  position: relative; 
+}
+@keyframes ani-images{ /*動畫名稱為*/
+  from   { left:-2000px;}
+  /* 25%  {background-color: yellow; left: 50px;}
+  50%  {background-color: blue; left: 80px;}
+  75%  {background-color: green; left: 120px;} */
+  to { left: 30%;}
 }
 
 .sidebar__item-img {
+  border-radius: 10px;
   flex: 0 0 40%;
-  height: 100%;
-  width: 40%;
+  height: 100px;;
+  width: 70px;
   object-fit: cover;
   object-position: 50% 50%;
+  /* box-shadow: 0.5px 0.5px 0.2px 0.5px rgb(163, 0, 0); */
+  opacity: 85%;
+  
 }
+
+
+.slide:hover{
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state:paused;
+  cursor: pointer;
+}
+
+.sidebar__item-img:hover{
+  height: 140px;;
+  width: 120px;
+}
+/* .sidebar__item:hover{
+  height: 140px;;
+  width: 120px;
+} */

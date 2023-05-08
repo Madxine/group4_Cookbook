@@ -12,6 +12,8 @@ export default function NutritionContextProvider({ children }) {
   const [ingredients, setIngredients] = useState([]);
   const [ingInfos, setIngInfos] = useState([]);
 
+  
+
   useEffect(() => {
     // console.log("Nutri ings prepared");
     if (Object.keys(recipes).length > 0) {
