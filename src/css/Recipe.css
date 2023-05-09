@@ -47,7 +47,7 @@
   text-shadow: 1px 1px #ac3c3c;
 }
 .recipe__rightside {
-  width: 100%;
+  width: 300%;
   background-color: rgba(231, 163, 69, 0.78);
   border-right: 2px solid;
   display: flex;
