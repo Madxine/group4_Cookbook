@@ -5,6 +5,7 @@ import { NutritionContext } from "../context/NutritionContext";
 import { NavLink } from "react-router-dom";
 import "../css/Recipe.css";
 import Nutrition from "./Nutrition";
+import Ingredients from "./Ingredients";
 
 export default function Recipe() {
   const { recipes } = useContext(ContentfulContext);
@@ -52,7 +53,7 @@ export default function Recipe() {
 
           <div className="recipe-description">
             {tab === "ingredients" ? (
-              <p>{recipe.fields.ingridients}</p>
+              <Ingredients recipe={recipe} />
             ) : tab === "preparation" ? (
               <p>{recipe.fields.description}</p>
             ) : (

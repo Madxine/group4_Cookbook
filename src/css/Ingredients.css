@@ -1,0 +1,9 @@
+.Ingredients__list {
+  margin: 1rem 3rem;
+}
+
+.Ingredients__item {
+  word-break: break-all;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

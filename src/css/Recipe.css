@@ -3,10 +3,10 @@
   flex-direction: row;
   width: 65%;
   height: 60vh;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
   border-radius: 20px;
   overflow: hidden;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
 }
 
 .bloc-tabs {
@@ -47,8 +47,8 @@
   text-shadow: 1px 1px #ac3c3c;
 }
 .recipe__rightside {
-  /* width: 100%; */
-  background-color: rgba(231, 163, 69, 0.378);
+  width: 300%;
+  background-color: rgba(231, 163, 69, 0.78);
   border-right: 2px solid;
   display: flex;
   flex-direction: column;
