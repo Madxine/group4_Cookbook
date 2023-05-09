@@ -38,7 +38,7 @@ export default function Recipe() {
             </NavLink>
 
             <NavLink to={`/${index}/preparation`} className="recipe__tab">
-              <h3>Preparation</h3>
+              <h3> Preparation</h3>
             </NavLink>
 
             <NavLink

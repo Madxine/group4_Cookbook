@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,7 +33,7 @@
   cursor: grab;
 }
 
-.sidebarItems{
+.sidebarItems {
   display: flex;
   flex-direction: column-reverse;
 }
@@ -67,46 +67,49 @@
 .sidebar__item:hover .sidebar__title {
   display: block;
   opacity: 1;
-} 
+}
 
-.slide{
+.slide {
   animation-name: ani-images; /*動畫名稱(自訂)*/
   animation-duration: 4s; /*一次完整動畫時間為4秒*/
-  animation-iteration-count:inherit; /*播放次數為無限次*/
-  animation-direction:alternate; /*播放方向為先正向再反向*/
-  position: relative; 
+  animation-iteration-count: inherit; /*播放次數為無限次*/
+  animation-direction: alternate; /*播放方向為先正向再反向*/
+  position: relative;
 }
-@keyframes ani-images{ /*動畫名稱為*/
-  from   { left:-2000px;}
+@keyframes ani-images {
+  /*動畫名稱為*/
+  from {
+    left: -2000px;
+  }
   /* 25%  {background-color: yellow; left: 50px;}
   50%  {background-color: blue; left: 80px;}
   75%  {background-color: green; left: 120px;} */
-  to { left: 30%;}
+  to {
+    left: 30%;
+  }
 }
 
 .sidebar__item-img {
   border-radius: 10px;
   flex: 0 0 40%;
-  height: 100px;;
-  width: 70px;
+  height: 150px;
+  width: 150px;
   object-fit: cover;
   object-position: 50% 50%;
   /* box-shadow: 0.5px 0.5px 0.2px 0.5px rgb(163, 0, 0); */
   opacity: 85%;
-  
 }
 
-
-.slide:hover{
-  -webkit-animation-play-state:paused;
-  -moz-animation-play-state:paused;
-  -o-animation-play-state:paused;
-  animation-play-state:paused;
+.slide:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
   cursor: pointer;
 }
 
-.sidebar__item-img:hover{
-  height: 140px;;
+.sidebar__item-img:hover {
+  height: 140px;
   width: 120px;
 }
 /* .sidebar__item:hover{

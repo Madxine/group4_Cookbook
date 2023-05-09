@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
- overflow: hidden;
+  overflow: hidden;
 }
 html {
   margin: 0;
@@ -9,18 +9,10 @@ html {
   background-color: rgb(246, 246, 246);
 }
 
-
-.video__container {
+.logo {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  top: 0px;
-  left: 100px;
-  z-index: 100;
-}
 
-.video {
-  
-  height: 100%;
-  width: 100%;
+  width: 100px;
+  height: 100px;
+  top: 0px;
 }

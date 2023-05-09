@@ -42,9 +42,9 @@
   left: 50%;
   font-size: 2rem;
   text-wrap: balance;
-  color: rgb(12, 4, 4);
+  color: rgb(227, 212, 212);
   text-align: center;
-  text-shadow: 1px 1px #ac3c3c;
+  text-shadow: 4px 4px #ac3c3c;
 }
 .recipe__rightside {
   /* width: 100%; */
@@ -56,4 +56,9 @@
 }
 .recipe-description {
   font-size: 2rem;
+}
+.active {
+  color: aliceblue;
+  font-size: 20px;
+  text-decoration: none;
 }
