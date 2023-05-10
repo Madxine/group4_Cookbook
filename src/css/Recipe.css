@@ -3,10 +3,10 @@
   flex-direction: row;
   width: 65%;
   height: 60vh;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
   border-radius: 20px;
   overflow: hidden;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
 }
 
 .bloc-tabs {
@@ -32,9 +32,6 @@
 
 .recipe__image {
   height: 100%;
-  display: block;
-  object-fit: contain;
-  object-position: center;
 }
 
 .recipe__title {
@@ -47,8 +44,8 @@
   text-shadow: 4px 4px #ac3c3c;
 }
 .recipe__rightside {
-  /* width: 100%; */
-  background-color: rgba(231, 163, 69, 0.378);
+  width: 300%;
+  background-color: rgba(33, 23, 24, 0.622);
   border-right: 2px solid;
   display: flex;
   flex-direction: column;
@@ -61,4 +58,30 @@
   color: aliceblue;
   font-size: 20px;
   text-decoration: none;
+}
+
+.recipe__tab {
+  text-decoration: none;
+  font-size: 15px;
+  color: #ac3c3c;
+  padding: 10px;
+  background-color: rgba(227, 212, 212, 0.971);
+  border-radius: 20px;
+}
+
+.prev,
+.next {
+  text-decoration: none;
+  font-size: 20px;
+  color: antiquewhite;
+  padding: 10px;
+  background-color: rgba(33, 23, 24, 0.622);
+  border-radius: 20px;
+  margin-top: 500px;
+}
+
+.button:hover {
+  transition: 0.2s;
+  background-color: rgba(145, 125, 100, 0.466);
+  color: #ac3c3c;
 }

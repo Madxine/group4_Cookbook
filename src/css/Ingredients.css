@@ -1,0 +1,11 @@
+.Ingredients__list {
+  margin-left: 50px;
+  list-style-type: circle;
+}
+
+.Ingredients__item {
+  word-break: break-all;
+  font-size: 3rem;
+  font-weight: 100;
+  color: antiquewhite;
+}

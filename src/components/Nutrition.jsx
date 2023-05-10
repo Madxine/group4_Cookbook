@@ -1,6 +1,6 @@
 import { NutritionContext } from "../context/NutritionContext";
 import { useContext, useState } from "react";
-
+import "../css/Nutrition.css";
 export default function Nutrition() {
   const { ingInfos } = useContext(NutritionContext);
   const [estimatedCostEUR, setEstimatedCostEUR] = useState(0);
@@ -27,7 +27,7 @@ export default function Nutrition() {
   }
 
   return (
-    <div>
+    <div className="text">
       <p>Estimated Cost: {estimatedCostEUR}€</p>
       <p>Calories: ca {totalCalories}</p>
     </div>

@@ -9,11 +9,11 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow: hidden;
 }
 
 body {
-  font-family: "Comic Neue";
-
+  font-family: "Ysabeau", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

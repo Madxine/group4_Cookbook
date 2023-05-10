@@ -1,22 +1,29 @@
-.head>img{
-height:20vh;
-opacity: 0;
-margin-bottom: 40px;
+.head > img {
+  height: 20vh;
+  opacity: 0;
+  margin-bottom: 40px;
 }
 
-.content{
-display: flex;
-flex-direction: column;
-justify-content:center;
-justify-content: space-around;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
 }
 
-.sidebarcontent{
-display: flex;
-flex-direction: column-reverse;
-margin-top: 40px;    
+.sidebarcontent {
+  display: flex;
+  flex-direction: column-reverse;
+  /* margin-top: 40px;     */
 }
 
 .col-rev {
   flex-direction: column-reverse;
 }
+/* .arrowright {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 200px;
+  color: blue;
+} */
