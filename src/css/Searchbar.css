@@ -3,6 +3,7 @@
   display: grid;
   place-content: center;
   margin: 1rem auto;
+  margin-top: -10px;
   width: 80rem;
   padding: 2rem 6rem;
   background-image: linear-gradient(
