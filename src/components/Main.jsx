@@ -6,8 +6,7 @@ import { useContext } from "react";
 import { ContentfulContext } from "../context/ContentfulContext";
 import { Routes, Route } from "react-router-dom";
 import Recipe from "./Recipe";
-import '../css/Main.css';
-
+import "../css/Main.css";
 export default function Main() {
   const { recipes, isRecipeDisplayed } = useContext(ContentfulContext);
 
@@ -17,21 +16,22 @@ export default function Main() {
       <video className="video" src={straw} autoPlay loop muted></video>
       <div className="content">
         <div className="head">
-          <img src="https://placehold.co/600x400"/>
+          <img src="https://placehold.co/600x400" />
         </div>
         <Searchbar />
-        <div className={`sidebarcontent ${isRecipeDisplayed ? 'col-rev' : ''}`}>
-        {Object.keys(recipes).length > 0 && recipes.items !== undefined && (
-          <Sidebar />
-        )}
-        <Routes>
+        <div className={`sidebarcontent ${isRecipeDisplayed ? "col-rev" : ""}`}>
           {Object.keys(recipes).length > 0 && recipes.items !== undefined && (
-             isRecipeDisplayed && <Route path="/:index/:tab" element={<Recipe />} />
+            <Sidebar />
           )}
-        </Routes>
+          <Routes>
+            {Object.keys(recipes).length > 0 &&
+              recipes.items !== undefined &&
+              isRecipeDisplayed && (
+                <Route path="/:index/:tab" element={<Recipe />} />
+              )}
+          </Routes>
+        </div>
       </div>
-      </div>
-    
     </div>
   );
 }

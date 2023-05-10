@@ -42,7 +42,7 @@
     hsl(1, 76%, 45%) 100%
   );
   border-radius: 7rem;
-  position : absolute;
+  position: absolute;
   top: 1rem;
   right: 7rem;
 }
@@ -73,12 +73,11 @@
 }
 
 .Searchbar--top .Searchbar__input {
-  padding: 1rem 10rem
+  padding: 1rem 10rem;
 }
 
 .Searchbar--top .Searchbar__btn {
   padding: 1rem 3rem 1rem 1.75rem;
-
 }
 
 @media (width < 520px) {
