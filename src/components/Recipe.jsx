@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ContentfulContext } from "../context/ContentfulContext";
 import { NutritionContext } from "../context/NutritionContext";
@@ -13,40 +13,42 @@ export default function Recipe() {
   const { setShallFetch } = useContext(NutritionContext);
   const { index, tab } = useParams();
   const [currentrecipe, setCurrentRecipe] = useState(0);
+  const [prevRecipe, setPrevRecipe] = useState(index);
+  const [nextRecipe, setNextRecipe] = useState(index);
   // const ingredients = recipes.fields.ingridients;
   console.log(tab);
 
-  const recipe = recipes.items[index];
+  let recipe = recipes.items[index];
   console.log(recipes);
 
-  const prevRecipe = () => {
-    setCurrentRecipe((prev) => {
-      if (prev === 0) {
-        return recipes.length - 1;
-      }
+  // const prevRecipe = () => {
+  //   const prevIndex = index === 0 ? recipes.items.length - 1 : index - 1;
+  //   recipe = recipes.items[prevIndex];
+  // };
 
-      return prev - 1;
-    });
-  };
+  useEffect(() => {
+    setPrevRecipe(+index === 0 ? recipes.items.length - 1 : Number(index) - 1);
+    setNextRecipe(+index === recipes.items.length - 1 ? 0 : +index + 1);
+  }, [index]);
 
-  const nextRecipe = () => {
-    setCurrentRecipe((prev) => {
-      if (prev === recipes.length - 1) {
-        return 0;
-      }
-      return prev + 1;
-    });
-  };
+  // const nextRecipe = () => {
+  //   setCurrentRecipe((prev) => {
+  //     if (prev === recipes.length - 1) {
+  //       return 0;
+  //     }
+  //     return prev + 1;
+  //   });
+  // };
 
   return (
     Object.keys(recipe).length > 0 && (
       <div className="recipe_container">
         <div className="button">
-          <button onClick={prevRecipe} className="prev">
-            &larr; Previous
-          </button>
+          <NavLink to={`/${prevRecipe}/ingredients`}>
+            <button className="prev">&larr; Previous</button>
+          </NavLink>
         </div>
-
+        <div></div>
         <div className="recipe__image--wrapper">
           <figure className="recipe__pic">
             <img
@@ -88,12 +90,9 @@ export default function Recipe() {
             )}
           </div>
         </div>
-        <div className="button">
-          <button onClick={nextRecipe} className="next">
-            {" "}
-            Next &rarr;{" "}
-          </button>
-        </div>
+        <NavLink to={`/${nextRecipe}/ingredients`} className="button">
+          <button className="next"> Next &rarr; </button>
+        </NavLink>
       </div>
     )
   );
