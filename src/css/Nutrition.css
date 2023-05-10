@@ -1,4 +1,7 @@
 .text {
-  color: antiquewhite;
   margin-left: 20px;
+  word-break: break-all;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: antiquewhite;
 }

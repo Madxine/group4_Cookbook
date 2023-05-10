@@ -1,8 +1,8 @@
 .list {
-  overflow-y: auto;
+  /* overflow-y: scroll; */
 }
 .list li {
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-left: 30px;
   color: antiquewhite;
 }
