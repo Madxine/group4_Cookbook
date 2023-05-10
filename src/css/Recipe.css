@@ -55,7 +55,24 @@
   display: flex;
   flex-direction: column;
   border-top-right-radius: 20px;
+  overflow-y: auto;
 }
+
+.recipe__rightside::-webkit-scrollbar {
+  border-radius: 20px;
+  width: 1rem;
+}
+.recipe__rightside::-webkit-scrollbar-track {
+  background-color: rgba(255, 140, 0, 0.096);
+  width: 1rem;
+}
+.recipe__rightside::-webkit-scrollbar-thumb {
+  box-shadow: inset 3px 3px 2px rgba(254, 101, 101, 0.844),
+    inset -3px -3px 2px rgb(255, 47, 47);
+  border-radius: 20px;
+  cursor: grab;
+}
+
 .recipe-description {
   font-size: 2rem;
 }
@@ -73,6 +90,10 @@
   background-color: rgba(227, 212, 212, 0.971);
   border-radius: 20px;
 }
+.recipe__tab:hover {
+  background-color: rgba(145, 125, 100, 0.466);
+  color: #8a7c7c;
+}
 
 .prev,
 .next {
@@ -82,6 +103,7 @@
   color: antiquewhite;
   padding: 10px;
   width: 100px;
+  height: 70px;
   background-color: rgba(33, 23, 24, 0.622);
   border-radius: 20px;
   /* margin-top: 500px; */
@@ -91,8 +113,13 @@
   align-self: center;
 }
 
-.button:hover {
+.next:hover {
   transition: 0.2s;
   background-color: rgba(145, 125, 100, 0.466);
-  color: #ac3c3c;
+  color: #8a7c7c;
+}
+.prev:hover {
+  transition: 0.2s;
+  background-color: rgba(145, 125, 100, 0.466);
+  color: #8a7c7c;
 }
