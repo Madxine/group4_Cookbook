@@ -1,7 +1,7 @@
 import "../css/Ingredients.css";
 
 export default function Ingredients({ recipe }) {
-  const ingArr = recipe.fields.ingridients;
+  const ingArr = recipe.ingridients;
   return (
     <ul className="Ingredients__list">
       {ingArr.map((ingredient, ind) => (

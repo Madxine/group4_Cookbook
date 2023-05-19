@@ -12,27 +12,25 @@ export default function NutritionContextProvider({ children }) {
   const [ingredients, setIngredients] = useState([]);
   const [ingInfos, setIngInfos] = useState([]);
 
-  
+  // useEffect(() => {
+  //   // console.log("Nutri ings prepared");
+  //   if (Object.keys(recipes).length > 0) {
+  //     setIngredients(recipes.items[recipeIndex].fields.ingridients);
+  //     setIngInfos([]);
+  //   }
+  // }, [recipes, recipeIndex]);
 
-  useEffect(() => {
-    // console.log("Nutri ings prepared");
-    if (Object.keys(recipes).length > 0) {
-      setIngredients(recipes.items[recipeIndex].fields.ingridients);
-      setIngInfos([]);
-    }
-  }, [recipes, recipeIndex]);
-
-  useEffect(() => {
-    if (shallFetch) {
-      console.log("fetching");
-      ingredients.forEach((ingredient) => {
-        spoonacularClient(ingredient)
-          .then((data) => setIngInfos((prev) => [...prev, data]))
-          .catch((err) => console.log(err));
-      });
-    }
-    setShallFetch(false);
-  }, [shallFetch]);
+  // useEffect(() => {
+  //   if (shallFetch) {
+  //     console.log("fetching");
+  //     ingredients.forEach((ingredient) => {
+  //       spoonacularClient(ingredient)
+  //         .then((data) => setIngInfos((prev) => [...prev, data]))
+  //         .catch((err) => console.log(err));
+  //     });
+  //   }
+  //   setShallFetch(false);
+  // }, [shallFetch]);
 
   console.log(ingInfos);
   return (
