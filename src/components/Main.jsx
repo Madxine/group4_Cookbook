@@ -20,15 +20,11 @@ export default function Main() {
         </div>
         <Searchbar />
         <div className={`sidebarcontent ${isRecipeDisplayed ? "col-rev" : ""}`}>
-          {Object.keys(recipes).length > 0 && recipes.items !== undefined && (
-            <Sidebar />
-          )}
+          {Object.keys(recipes).length > 0 && <Sidebar />}
           <Routes>
-            {Object.keys(recipes).length > 0 &&
-              recipes.items !== undefined &&
-              isRecipeDisplayed && (
-                <Route path="/:index/:tab" element={<Recipe />} />
-              )}
+            {Object.keys(recipes).length > 0 && isRecipeDisplayed && (
+              <Route path="/:index/:tab" element={<Recipe />} />
+            )}
           </Routes>
         </div>
       </div>

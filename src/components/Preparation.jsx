@@ -1,6 +1,6 @@
 import "../css/Preparation.css";
 export default function Preparation({ recipe }) {
-  const prepArr = recipe.fields.description;
+  const prepArr = recipe.description;
   const description = prepArr.split(/\d\. /);
   console.log(description);
   return (
